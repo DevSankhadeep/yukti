@@ -1,0 +1,52 @@
+.streamingMessage {
+  min-height: 24px;
+  position: relative;
+}
+
+.loading {
+  color: #6c757d;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.loading::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border: 2px solid #6c757d;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+.error {
+  color: #dc3545;
+  padding: 0.5rem;
+  border: 1px solid #f5c6cb;
+  border-radius: 0.25rem;
+  background-color: #f8d7da;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.retryButton {
+  background: none;
+  border: none;
+  color: #dc3545;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+
+.retryButton:hover {
+  color: #bd2130;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
